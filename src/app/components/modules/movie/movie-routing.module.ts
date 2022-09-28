@@ -19,15 +19,6 @@ const routes: Routes =[
           data: PopularResolver
         }
       },
-      
-      {
-        path: 'popular/:id',
-        component: PopularComponent,
-        resolve:{
-          data: PopularResolver
-        }
-      },
-
       {
         path: 'find',
         component: FindComponent,

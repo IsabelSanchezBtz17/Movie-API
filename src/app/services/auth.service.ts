@@ -28,7 +28,6 @@ export class AuthService {
 
     getToken(username: string, password: string ){
       this.token= '';
-
       if (username === 'admin' && password ==='admin'){
         this.login();
         localStorage.setItem('username', username);
@@ -38,4 +37,9 @@ export class AuthService {
       }
       return 'Datos incorrectos'
     }
+
+   getProgramTv(){
+    
+   }
+
 }

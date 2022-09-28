@@ -1,0 +1,11 @@
+<form class="form" [formGroup]="formtv">
+  <input class="inputText" type="text" name="id" formControlName="id" placeholder="id programa tv" autofocus="1">
+  <button (click)="findProgram()">Buscar</button>
+</form>
+
+
+<div>
+  <p>Name: {{name}}</p>
+  <p>Description: {{description}}</p>
+  <p>Status: {{status}}</p>
+</div>

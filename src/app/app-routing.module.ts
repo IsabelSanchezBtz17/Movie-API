@@ -16,7 +16,12 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./components/modules/auth/auth.module').then(m => m.AuthModule),
   },
-
+  {
+    path: 'tv',
+    loadChildren: () => import('./components/modules/tv/tv.module').then(m => m.TvModule),
+    canLoad: [AuthGuard],
+    canActivate: [AuthGuard]
+  },
   {
     path: 'home',
     component: PrincipalComponent,
