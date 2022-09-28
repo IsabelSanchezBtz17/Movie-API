@@ -1,0 +1,29 @@
+
+<div class="login">
+    <form class="form" [formGroup]="formularioLogin" (submit)="onSubmit()">
+
+        <div>
+            <input class="inputText" type="text" name="username" id="username" formControlName="username" placeholder="Usuario" autofocus="1">
+            <br>
+            <label style="color: red;" *ngIf="formularioLogin.get('username')?.errors && formularioLogin.get('username')?.touched && formularioLogin.get('username')?.dirty"> Tamaño no definido </label>
+
+        </div>
+
+        <br>
+
+        <div>
+            <input class="inputText" type="text" name="password" id="password" formControlName="password" placeholder="Contraseña" autofocus="1">
+            <br>
+            <label style="color: red;"*ngIf="formularioLogin.get('password')?.errors && formularioLogin.get('password')?.touched && formularioLogin.get('password')?.dirty">Contraseña requerido </label>
+
+        </div>
+
+        <br>
+        <div>
+            <button routerLink="/home" [disabled]="formularioLogin.invalid && formularioLogin.dirty" role="submit" type="submit">Ingresar</button>
+        </div>
+
+        <p style="color: red;">{{response}}</p>
+    </form>
+  
+</div>

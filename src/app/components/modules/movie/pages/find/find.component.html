@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="center">
+      <h4><b>{{original_title}}</b></h4>
+      <app-information *ngIf="flag"  [overview]="overview"  [original_language]="original_language"  [homepage]="homepage" [release_date]="release_date"  (mensajeEmitter)="recibirMensajedelHijo($event)"></app-information>
+      <br>
+      <button *ngIf="!flag" (click)="getInformation()">Information </button>
+    </div>
+
+   
+  </div>

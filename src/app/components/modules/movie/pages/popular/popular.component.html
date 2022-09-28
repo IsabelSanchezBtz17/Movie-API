@@ -1,0 +1,10 @@
+<h1>{{name}}</h1>
+<p>{{description}}</p>
+
+
+<div   appFocus *ngFor="let item of movies" class="card">
+    <div class="text" >
+      <h4><b>{{item.original_title}}</b></h4>
+      <p>{{item.overview}}</p>
+    </div>   
+</div>
